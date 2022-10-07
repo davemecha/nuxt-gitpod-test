@@ -1,0 +1,10 @@
+
+tasks:
+  - name: Nuxt
+    init: yarn install
+    command: yarn dev
+
+vscode:
+  extensions:
+    - johnsoncodehk.volar
+    - johnsoncodehk.vscode-typescript-vue-plugin
