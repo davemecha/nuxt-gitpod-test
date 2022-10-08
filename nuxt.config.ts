@@ -15,6 +15,12 @@ export default defineNuxtConfig({
         },
       },
     },
+    server: {
+      hmr: {
+        // protocol: 'wss',
+        // clientPort: 443,
+      },
+    },
   },
   build: {
     postcss: {
