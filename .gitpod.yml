@@ -1,7 +1,7 @@
 
 tasks:
   - name: Nuxt
-    init: yarn install
+    init: yarn install --non-interactive
     command: yarn dev
 
 vscode:
