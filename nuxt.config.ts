@@ -17,8 +17,11 @@ export default defineNuxtConfig({
     },
     server: {
       hmr: {
-        // protocol: 'wss',
-        // clientPort: 443,
+        protocol: 'wss',
+        clientPort: 443,
+      },
+      proxy: {
+        '/_nuxt': 'http://localhost:24678/_nuxt',
       },
     },
   },
