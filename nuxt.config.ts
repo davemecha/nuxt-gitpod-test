@@ -17,11 +17,16 @@ export default defineNuxtConfig({
     },
     server: {
       hmr: {
+        // host: '0.0.0.0',
+        port: 1337,
         protocol: 'wss',
         clientPort: 443,
       },
       proxy: {
-        '/_nuxt': 'http://localhost:24678/_nuxt',
+        '/_nuxt': {
+          target: 'http://localhost:1337',
+          changeOrigin: true,
+        },
       },
     },
   },
