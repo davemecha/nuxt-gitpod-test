@@ -1,8 +1,16 @@
 
 tasks:
   - name: Nuxt
-    init: yes | yarn install
+    init: printf 'y\n' | yarn install
     command: yarn dev
+
+ports:
+  - port: 3000
+    name: Nuxt
+    visibility: public
+  - port: 1337
+    name: Vite HMR
+    visibility: public
 
 vscode:
   extensions:
