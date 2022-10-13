@@ -7,6 +7,14 @@ export default defineNuxtConfig({
     shim: false,
     strict: true,
   },
+  // proxy: {
+  //   '/hmr': {
+  //     target: 'http://localhost:1337/',
+  //     changeOrigin: true,
+  //   //   secure: false,
+  //     ws: true,
+  //   },
+  // },
   vite: {
     css: {
       preprocessorOptions: {
@@ -22,12 +30,14 @@ export default defineNuxtConfig({
         protocol: 'wss',
         clientPort: 443,
       },
-      proxy: {
-        '/_nuxt': {
-          target: 'http://localhost:1337',
-          changeOrigin: true,
-        },
-      },
+      // proxy: {
+      //   '/_nuxt': {
+      //     target: 'http://localhost:1337',
+      //     changeOrigin: true,
+      //     // secure: false,
+      //     ws: true,
+      //   },
+      // },
     },
   },
   build: {
